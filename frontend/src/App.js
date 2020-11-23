@@ -3,6 +3,7 @@ import './App.scss';
 import ComplexNumberRecordingForm from "./component/ComplexNumberRecordingForm";
 import ComplexNumberList from "./component/ComplexNumberList";
 import Login from "./component/Login";
+import AdminView from "./component/AdminView";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
                 <div className="card-body">
                     <Login></Login>
                 </div>
+            <AdminView/>
         </div>
     </div>
   );
