@@ -152,6 +152,99 @@ server.get('/guest',(req,res) => {
     }
 });
 
+server.get('/position',(req,res) => {
+    const positions = [
+        {
+            id: 1,
+            name: 'Recepciós'
+        },
+        {
+            id: 2,
+            name: 'Cafetéria munkás'
+        },
+        {
+            id: 3,
+            name: 'Pultos'
+        }
+    ];
+    const {
+        id
+    } = req.query;
+    let position = positions.find((tmp) => {
+        return tmp.id === parseInt(id)
+    });
+    if(position === undefined){
+        res.status(httpStatus.UNAUTHORIZED).send();
+    }
+    else{
+        res.status(httpStatus.OK).send(position);
+    }
+});
+
+server.get('/service',(req,res) => {
+    const services = [
+        {
+            id: 1,
+            name: 'Termál medence',
+            price: 1000
+        },
+        {
+            id: 2,
+            name: 'Hullámmedence',
+            price: 2000
+        },
+        {
+            id: 3,
+            name: 'Szauna',
+            price: 3000
+        }
+    ];
+    const {
+        id
+    } = req.query;
+    let service = services.find((tmp) => {
+        return tmp.id === parseInt(id)
+    });
+    if(service === undefined){
+        res.status(httpStatus.UNAUTHORIZED).send();
+    }
+    else{
+        res.status(httpStatus.OK).send(service);
+    }
+});
+
+server.get('/product',(req,res) => {
+    const products = [
+        {
+            id: 1,
+            name: 'Milka csoki',
+            price: 1000
+        },
+        {
+            id: 2,
+            name: 'Chips',
+            price: 2000
+        },
+        {
+            id: 3,
+            name: 'Sör',
+            price: 3000
+        }
+    ];
+    const {
+        id
+    } = req.query;
+    let product = products.find((tmp) => {
+        return tmp.id === parseInt(id)
+    });
+    if(product === undefined){
+        res.status(httpStatus.UNAUTHORIZED).send();
+    }
+    else{
+        res.status(httpStatus.OK).send(product);
+    }
+});
+
 server.use(temp);
 server.use(router);
 server.listen(8080,function (){
