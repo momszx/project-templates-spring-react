@@ -4,6 +4,7 @@ import ComplexNumberRecordingForm from "./component/ComplexNumberRecordingForm";
 import ComplexNumberList from "./component/ComplexNumberList";
 import Login from "./component/Login";
 import AdminView from "./component/AdminView";
+import IdSearch from "./component/IdSearch";
 
 function App() {
   return (
