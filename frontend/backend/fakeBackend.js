@@ -112,6 +112,46 @@ server.get('/leaving',(req,res) => {
     }
 });
 
+server.post('/guest',(req,res) => {console.log(req.body);
+    res.status(200).send(
+        {
+            id: 'id',
+            name: 'name',
+            dateOfBirth: 'dateOfBirth',
+            arrivalDate: 'arrivalDate'
+        }
+    );
+});
+
+server.get('/guest',(req,res) => {
+    const guests = [
+        {
+            id: 1,
+            name: 'Gipsz Jakab',
+            dateOfBirth: '1988-09-29',
+            arrivalDate: '2020-11-12-12-00-00'
+        },
+        {
+            id: 2,
+            name: 'Gipsz Jakab Jr',
+            dateOfBirth: '2010-09-29',
+            arrivalDate: '2020-11-12-12-00-00'
+        }
+    ];
+    const {
+        id
+    } = req.query;
+    let guest = guests.find((tmp) => {
+        return tmp.id === parseInt(id)
+    });
+    if(guest === undefined){
+        res.status(httpStatus.UNAUTHORIZED).send();
+    }
+    else{
+        res.status(httpStatus.OK).send(guest);
+    }
+});
+
 server.use(temp);
 server.use(router);
 server.listen(8080,function (){
