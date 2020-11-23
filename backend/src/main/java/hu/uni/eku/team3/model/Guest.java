@@ -10,7 +10,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Guest {
-    private String identityNumber;
+    private int identityNumber;
     private String name;
     private Date dateOfBirth;
     private Date arrivalDate;
