@@ -1,21 +1,15 @@
 import React from "react";
 import {Formik} from "formik";
 import * as Yup from "yup";
-import { parse, isDate } from "date-fns";
-function parseDateString(value, originalValue) {
-    const parsedDate = isDate(originalValue)
-        ? originalValue
-        : parse(originalValue, "yyyy-MM-dd", new Date());
 
-    return parsedDate;
-}
+
 const AdminView = () => (
     <Formik
         initialValues={{Name: "", ID: "", DateOfBirth: ""}}
         onSubmit={(values, {setSubmitting}) => {
             setTimeout(() => {
                 //LoginActions.login(values);
-                console.log("Ámen");
+                console.log(values);
                 setSubmitting(false);
             }, 500);
         }}
@@ -25,8 +19,8 @@ const AdminView = () => (
                 .required("Név megadása kötelező"),
             ID: Yup.number()
                 .required("Nem lehet üres!").positive().integer(),
-            DateOfBirth: Yup.string()
-                .required("Kötelező megadni!")
+            DateOfBirth: Yup.date()
+                .required("Kötelező megadni!"),
         })}
     >
         {props => {
@@ -42,22 +36,22 @@ const AdminView = () => (
             return (
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="Name">Név</label>
                         <input
-                            name="email"
+                            name="Name"
                             type="text"
                             placeholder="Add meg az email címed"
                             value={values.email}
                             onChange={handleChange}
                             onBlur={handleBlur}
-                            className={ errors.email && touched.email ? "form-control is-invalid" : "form-control"}
+                            className={ errors.Name && touched.Name ? "form-control is-invalid" : "form-control"}
                         />
-                        {errors.email && touched.email && (
-                            <div className={"invalid-feedback"}>{errors.email} </div>
+                        {errors.Name && touched.Name && (
+                            <div className={"invalid-feedback"}>{errors.Name} </div>
                         )}
                     </div>
                     <div className={"form-group"}>
-                        <label htmlFor="email">ID</label>
+                        <label htmlFor="ID">ID</label>
                         <input
                             name="ID"
                             type="text"
@@ -65,10 +59,25 @@ const AdminView = () => (
                             value={values.password}
                             onChange={handleChange}
                             onBlur={handleBlur}
-                            className={errors.password && touched.password ? "form-control is-invalid" : "form-control"}
+                            className={errors.ID && touched.ID ? "form-control is-invalid" : "form-control"}
                         />
-                        {errors.password && touched.password && (
-                            <div className={"invalid-feedback"}>{errors.password}</div>
+                        {errors.ID && touched.ID && (
+                            <div className={"invalid-feedback"}>{errors.ID}</div>
+                        )}
+                    </div>
+                    <div className={"form-group"}>
+                        <label htmlFor="DateofBirth">Születési Dátum</label>
+                        <input
+                            name="DateOfBirth"
+                            type="date"
+                            placeholder="Add meg a születési dátumod!"
+                            value={values.password}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            className={errors.DateOfBirth && touched.DateOfBirth ? "form-control is-invalid" : "form-control"}
+                        />
+                        {errors.DateOfBirth && touched.DateOfBirth && (
+                            <div className={"invalid-feedback"}>{errors.DateOfBirth}</div>
                         )}
                     </div>
                     <button type="submit" disabled={isSubmitting} className={"btn btn-primary"}>
