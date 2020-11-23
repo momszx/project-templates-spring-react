@@ -5,6 +5,7 @@ import ComplexNumberList from "./component/ComplexNumberList";
 import Login from "./component/Login";
 import AdminView from "./component/AdminView";
 import IdSearch from "./component/IdSearch";
+import GuestData from "./component/GuestData";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
                     <Login></Login>
                 </div>
             <AdminView/>
+            <GuestData/>
         </div>
     </div>
   );
