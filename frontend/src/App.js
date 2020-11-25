@@ -5,6 +5,7 @@ import ComplexNumberList from "./component/ComplexNumberList";
 import Login from "./component/Login";
 import AdminView from "./component/AdminView";
 import Navigation from "./component/Navigation";
+import Leaving from "./component/Leaving";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
                 </div>
             <AdminView/>
             <Navigation></Navigation>
+            <Leaving></Leaving>
         </div>
     </div>
   );
