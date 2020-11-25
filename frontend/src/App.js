@@ -4,6 +4,7 @@ import ComplexNumberRecordingForm from "./component/ComplexNumberRecordingForm";
 import ComplexNumberList from "./component/ComplexNumberList";
 import Login from "./component/Login";
 import AdminView from "./component/AdminView";
+import Navigation from "./component/Navigation";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
                     <Login></Login>
                 </div>
             <AdminView/>
+            <Navigation></Navigation>
         </div>
     </div>
   );
