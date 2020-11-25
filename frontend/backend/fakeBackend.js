@@ -73,11 +73,12 @@ server.get('/leaving',(req,res) => {
                 id: '1',
                 service: 'vizicsúszda',
                 barCode: ''
-            },
+                },
                 {
                     id: '2',
                     service: '',
-                    barCode: 'cocacola'
+                    barCode: 'cocacola',
+                    amount: 2
                 }]
         },
         {
@@ -94,7 +95,8 @@ server.get('/leaving',(req,res) => {
                 {
                     id: '4',
                     service: '',
-                    barCode: 'cocacola'
+                    barCode: 'cocacola',
+                    amount: 5
                 }]
         }
     ];
