@@ -32,11 +32,11 @@ public class ProductsController {
     @ResponseBody
     @ApiOperation(value = "Fetch products")
     public Collection<ProductsDto> fetchAll() {
-        return ProductsService.fetchAll().stream().map(product ->
+        return productsService.readAll().stream().map(product ->
                 ProductsDto.builder()
-                        .productName(product.getproductName())
-                        .productPrice(product.getproductPrice())
-                        .barCode(product.getbarCode())
+                        .productName(product.getProductName())
+                        .productPrice(product.getProductPrice())
+                        .id(product.getId())
                         .Adult(product.getAdult())
                         .build()
         ).collect(Collectors.toList());
