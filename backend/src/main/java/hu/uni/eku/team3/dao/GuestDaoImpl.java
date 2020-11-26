@@ -27,17 +27,17 @@ public class GuestDaoImpl implements GuestDao {
 
     @Override
     public void update(Integer original, Guest updated) {
-        // hu.uni.eku.team3.dao.entity.Guest toUpdate =repository.findUsageById(original);
-        // toUpdate.setDepartureDate(updated.getDepartureDate());
-        // repository.save(toUpdate);
+         hu.uni.eku.team3.dao.entity.Guest toUpdate =repository.findUsageById(original);
+         toUpdate.setDepartureDate(updated.getDepartureDate());
+         repository.save(toUpdate);
     }
 
     @Override
     public void delete(Integer guestDelete) {
-       // hu.uni.eku.team3.dao.entity.Guest result = repository.findUsageById(guestDelete);
-       // if (result != null) {
-       //     repository.delete(result);
-       // }
+        hu.uni.eku.team3.dao.entity.Guest result = repository.findUsageById(guestDelete);
+        if (result != null) {
+           repository.delete(result);
+       }
     }
 
     private static class GuestEntityModelConverter {
