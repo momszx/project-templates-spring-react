@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Guest {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String identityNumber;
+    private int identityNumber;
     @Column
     private String name;
     @Column

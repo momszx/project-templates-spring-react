@@ -3,6 +3,10 @@ import './App.scss';
 import ComplexNumberRecordingForm from "./component/ComplexNumberRecordingForm";
 import ComplexNumberList from "./component/ComplexNumberList";
 import Login from "./component/Login";
+import AdminView from "./component/AdminView";
+import Navigation from "./component/Navigation";
+import Leaving from "./component/Leaving";
+import ServiceView from "./component/ServiceView";
 
 function App() {
   return (
@@ -11,6 +15,10 @@ function App() {
                 <div className="card-body">
                     <Login></Login>
                 </div>
+            <AdminView/>
+            <Navigation></Navigation>
+            <ServiceView></ServiceView>
+            <Leaving></Leaving>
         </div>
     </div>
   );
