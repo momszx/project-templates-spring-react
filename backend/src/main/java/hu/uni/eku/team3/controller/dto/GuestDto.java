@@ -9,7 +9,7 @@ import java.util.Date;
 @Data
 @Builder
 public class GuestDto {
-    private int identityNumber;
+    private int id;
     private String name;
     private Date dateOfBirth;
     private Date arrivalDate;

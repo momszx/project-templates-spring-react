@@ -18,13 +18,13 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
-
+/*
 @RestController
 @RequestMapping(value = "/Guest")
 @RequiredArgsConstructor
 @Api(tags = "Guest")
-@Slf4j
-public class GuestController {
+@Slf4j*/
+public class GuestController {/*
 
     private final GuestService guestService;
 
@@ -34,7 +34,7 @@ public class GuestController {
     public Collection<GuestDto> fetchAll() {
         return guestService.readAll().stream().map(guest ->
                 GuestDto.builder()
-                        .identityNumber(guest.getIdentityNumber())
+                        .id(guest.getId())
                         .name(guest.getName())
                         .dateOfBirth(guest.getDateOfBirth())
                         .arrivalDate(guest.getArrivalDate())
@@ -48,7 +48,7 @@ public class GuestController {
     public Collection<GuestDto> query() {
         return guestService.readAll().stream().map(model ->
                 GuestDto.builder()
-                        .identityNumber(model.getIdentityNumber())
+                        .id(model.getId())
                         .name(model.getName())
                         .dateOfBirth(model.getDateOfBirth())
                         .arrivalDate(model.getArrivalDate())
@@ -61,7 +61,7 @@ public class GuestController {
     @ApiOperation(value = "Update a guest")
     public void update(@PathVariable Integer identityNumber, @RequestBody GuestRecordRequestDto request) {
         try {
-            guestService.update(identityNumber, new Guest(Integer.parseInt(request.getIdentityNumber()), request.getName(), request.getDateOfBirth(), request.getArrivalDate(),request.getDepartureDate()));
+            guestService.update(identityNumber, new Guest(Integer.parseInt(request.getId()), request.getName(), request.getDateOfBirth(), request.getArrivalDate(),request.getDepartureDate()));
         }
         catch(GuestNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.CONFLICT);
@@ -77,6 +77,6 @@ public class GuestController {
         catch (GuestNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
         }
-    }
+    }*/
 
 }

@@ -27,17 +27,17 @@ public class GuestDaoImpl implements GuestDao {
 
     @Override
     public void update(Integer original, Guest updated) {
-         hu.uni.eku.team3.dao.entity.Guest toUpdate =repository.findUsageById(original);
+        /* hu.uni.eku.team3.dao.entity.Guest toUpdate =repository.findUsageById(original);
          toUpdate.setDepartureDate(updated.getDepartureDate());
-         repository.save(toUpdate);
+         repository.save(toUpdate);*/
     }
 
     @Override
     public void delete(Integer guestDelete) {
-        hu.uni.eku.team3.dao.entity.Guest result = repository.findUsageById(guestDelete);
+        /*hu.uni.eku.team3.dao.entity.Guest result = repository.findUsageById(guestDelete);
         if (result != null) {
            repository.delete(result);
-       }
+       }*/
     }
 
     private static class GuestEntityModelConverter {
@@ -53,7 +53,7 @@ public class GuestDaoImpl implements GuestDao {
 
         private static hu.uni.eku.team3.dao.entity.Guest model2entity(Guest model) {
             return hu.uni.eku.team3.dao.entity.Guest.builder()
-                    .identityNumber(model.getIdentityNumber())
+                    .identityNumber(model.getId())
                     .name(model.getName())
                     .dateOfBirth(model.getDateOfBirth())
                     .arrivalDate(model.getArrivalDate())

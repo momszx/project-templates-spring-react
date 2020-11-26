@@ -12,7 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GuestRecordRequestDto {
-    private String identityNumber;
+    private String id;
     private String name;
     private Date dateOfBirth;
     private Date arrivalDate;
