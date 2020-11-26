@@ -17,7 +17,7 @@ public class GuestServiceImpl implements GuestService {
     public void create(Guest guestCreate) throws GuestAlreadyExistsException {
         final boolean alreadyExists =dao.readAll()
                 .stream()
-                .allMatch(sl -> sl.getId() == guestCreate.getId());
+                .allMatch(sl -> sl.getIdentityNumber() == guestCreate.getIdentityNumber());
         if (alreadyExists){
             throw new GuestAlreadyExistsException(String.format("Guest (%s) already exists",guestCreate.toString()));
         }
