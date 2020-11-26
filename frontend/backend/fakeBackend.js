@@ -6,6 +6,7 @@ let database = {};
 let router = jsonServer.router(database);
 let temp = jsonServer.defaults();
 
+/*
 server.post('/login',(req,res) => {console.log(req.body);
     res.status(200).send(
         {
@@ -14,14 +15,28 @@ server.post('/login',(req,res) => {console.log(req.body);
         }
     );
 });
+*/
 
-server.get('/login',(req,res) => {
+server.post('/login', (req,res)=>{
+    console.log(req.body);
+    res.status(200).send(
+        {
+            id: 1,
+            employeeName: 'Gipsz Jakab',
+            employeeEmail: 'gipsz@jakab.com',
+            pwd: 'asd',
+            positionID: 'RECEPTIONIST'
+        });
+});
+
+/*
+server.post('/login',(req,res) => {
     const users = [
         {
             id: 1,
             employeeName: 'Gipsz Jakab',
             employeeEmail: 'gipsz@jakab.com',
-            pwd: 'gipszjakab',
+            pwd: 'asd',
             positionID: 1
         },
         {
@@ -42,17 +57,20 @@ server.get('/login',(req,res) => {
     const {
         email,password
     } = req.query;
+    console.log(req.query)
     let user = users.find((tmp) => {
         return tmp.employeeEmail === email && tmp.pwd === password
     });
     if(user === undefined){
+        console.log("undefined")
         res.status(httpStatus.UNAUTHORIZED).send();
     }
     else{
+        console.log("OK")
         res.status(httpStatus.OK).send(user);
     }
 });
-
+*/
 server.post('/leaving',(req,res) => {console.log(req.body);
     res.status(200).send(
         {
