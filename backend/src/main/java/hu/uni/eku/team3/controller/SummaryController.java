@@ -3,7 +3,6 @@ package hu.uni.eku.team3.controller;
 import hu.uni.eku.team3.controller.dto.SummaryDto;
 import hu.uni.eku.team3.controller.dto.SummaryRecordRequestDto;
 import hu.uni.eku.team3.model.Summary;
-
 import hu.uni.eku.team3.service.SummaryService;
 import hu.uni.eku.team3.service.exceptions.SummaryAlreadyExistsException;
 import hu.uni.eku.team3.service.exceptions.SummaryNotFoundException;
@@ -33,7 +32,7 @@ public class SummaryController {
     @ResponseBody
     @ApiOperation(value = "Fetch summary")
     public Collection<SummaryDto> fetchAll() {
-        return SummaryService.fetchAll().stream().map(summary ->
+        return summaryService.fetchAll().stream().map(summary ->
                 SummaryDto.builder()
                         .summaryID(summary.getsummaryID())
                         .identityNumber(summary.getidentityNumber())
@@ -47,7 +46,7 @@ public class SummaryController {
     @ApiOperation(value = "Create new summary")
     public void create(@RequestBody SummaryRecordRequestDto request) {
         try{
-            SummaryService.create(new Summary(request.getsummaryID(), request.getidentityNumber(), request.getservicesID(), request.getbarCode()));
+            summaryService.create(new Summary(request.getsummaryID(), request.getidentityNumber(), request.getservicesID(), request.getbarCode()));
         }
         catch (SummaryAlreadyExistsException e) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
@@ -59,7 +58,7 @@ public class SummaryController {
     @ApiOperation(value = "Delete summary")
     public void delete(@PathVariable Integer summaryID) {
         try{
-            SummaryService.delete(summaryID);
+            summaryService.delete(summaryID);
         }
         catch (SummaryNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());

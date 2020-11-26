@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Service {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
     @Column
     private String name;
     @Column

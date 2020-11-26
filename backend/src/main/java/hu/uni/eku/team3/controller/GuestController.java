@@ -32,13 +32,13 @@ public class GuestController {
     @ResponseBody
     @ApiOperation(value = "Fetch guest")
     public Collection<GuestDto> fetchAll() {
-        return GuestService.fetchAll().stream().map(guest ->
+        return guestService.readAll().stream().map(guest ->
                 GuestDto.builder()
-                        .identityNumber(guest.getidentityNumber())
-                        .name(guest.getUserId())
-                        .dateOfBirth(guest.getdateOfBirth())
-                        .arrivalDate(guest.getarrivalDate())
-                        .departureDate(guest.getdepartureDate())
+                        .identityNumber(guest.getIdentityNumber())
+                        .name(guest.getName())
+                        .dateOfBirth(guest.getDateOfBirth())
+                        .arrivalDate(guest.getArrivalDate())
+                        .departureDate(guest.getDepartureDate())
                         .build()
         ).collect(Collectors.toList());
     }
@@ -46,13 +46,13 @@ public class GuestController {
     @ResponseBody
     @ApiOperation(value= "Query  Guest")
     public Collection<GuestDto> query() {
-        return service.readAll().stream().map(model ->
+        return guestService.readAll().stream().map(model ->
                 GuestDto.builder()
-                        .identityNumber(model.getidentityNumber())
-                        .name(model.getname())
-                        .dateOfBirth(model.getdateOfBirth())
-                        .arrivalDate(model.getarrivalDate())
-                        .departureDate(model.getdepartureDate())
+                        .identityNumber(model.getIdentityNumber())
+                        .name(model.getName())
+                        .dateOfBirth(model.getDateOfBirth())
+                        .arrivalDate(model.getArrivalDate())
+                        .departureDate(model.getDepartureDate())
                         .build()
         ).collect(Collectors.toList());
     }
@@ -61,7 +61,7 @@ public class GuestController {
     @ApiOperation(value = "Update a guest")
     public void update(@PathVariable Integer identityNumber, @RequestBody GuestRecordRequestDto request) {
         try {
-            GuestService.update(identityNumber, new Guest(request.getidentityNumber(), request.getname(), request.getdateOfBirth(), request.getarrivalDate(),request.getdepartureDate()));
+            guestService.update(identityNumber, new Guest(Integer.parseInt(request.getIdentityNumber()), request.getName(), request.getDateOfBirth(), request.getArrivalDate(),request.getDepartureDate()));
         }
         catch(GuestNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.CONFLICT);
@@ -72,12 +72,11 @@ public class GuestController {
     @ApiOperation(value = "Delete guest")
     public void delete(@PathVariable Integer identityNumber) {
         try{
-                GuestService.delete(identityNumber);
-            }
-        catch (GuestNotFoundException e) {
-                throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
-            }
+            guestService.delete(identityNumber);
         }
-
+        catch (GuestNotFoundException e) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
+        }
     }
 
+}
