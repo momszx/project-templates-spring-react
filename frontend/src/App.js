@@ -5,9 +5,11 @@ import ComplexNumberList from "./component/ComplexNumberList";
 import Login from "./component/Login";
 import AdminView from "./component/AdminView";
 import Navigation from "./component/Navigation";
-import Leaving from "./component/Leaving";
 import ServiceViewTable from "./component/ServieViewTable";
+import Leaving from "./component/Leaving";
 import ServiceView from "./component/ServiceView";
+import IdSearch from "./component/IdSearch";
+import GuestData from "./component/GuestData";
 
 function App() {
   return (
@@ -18,8 +20,9 @@ function App() {
                 </div>
             <AdminView/>
             <Navigation></Navigation>
-            <Leaving></Leaving>
             <ServiceView></ServiceView>
+            <Leaving></Leaving>
+            <GuestData/>
         </div>
     </div>
   );
