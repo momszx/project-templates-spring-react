@@ -13,10 +13,13 @@ function App() {
                 <div className="card-body">
                     <Login></Login>
                 </div>
-            <AdminView/>
-            <Navigation></Navigation>
-            <ServiceView></ServiceView>
-            <Leaving></Leaving>
+            <div>
+                <Navigation/>
+                <AdminView/>
+                <Navigation></Navigation>
+                <ServiceView></ServiceView>
+                <Leaving></Leaving>
+            </div>
         </div>
     </div>
   );

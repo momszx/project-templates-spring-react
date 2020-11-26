@@ -20,6 +20,9 @@ class Navigation extends React.Component{
 
     _updateState(){
         this.setState({userData : store._user});
+        console.log("state")
+        console.log(this.state)
+        console.log(this.state.userData.employeeName)
     }
 
     render(){

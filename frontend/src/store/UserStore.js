@@ -1,8 +1,11 @@
 import {EventEmitter} from 'events'
 import dispatcher from "../dispatcher/Dispatcher";
 import * as actionConstants from '../dispatcher/LoginActionConstans'
+import ReactDOM from 'react-dom';
+import React from "react";
+import Navigation from "../component/Navigation";
 
-class UserStore extends  EventEmitter {
+class UserStore extends EventEmitter {
     _user = null;
 
     emitChange(){
@@ -26,4 +29,5 @@ dispatcher.register(({action,payload})=>{
     store._user = payload;
     console.log(store._user)
     store.emitChange();
+    //ReactDOM.render((<Navigation/>), document.getElementById('root'));
 })

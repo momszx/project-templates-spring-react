@@ -21,8 +21,8 @@ export const Login = ({email,password}) =>{
             console.log(error);
             dispatcher.dispatch({
                 action: actionConstants.showError,
-                payload : `${error.response.status}-${error.response.statusText}: ${error.response.data.message}`
-                //payload : null
+                //payload : `${error.response.status}-${error.response.statusText}: ${error.response.data.message}`
+                payload : null
             })
         })
 }
