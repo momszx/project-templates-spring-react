@@ -7,6 +7,7 @@ import AdminView from "./component/AdminView";
 import Navigation from "./component/Navigation";
 import Leaving from "./component/Leaving";
 import ServiceViewTable from "./component/ServieViewTable";
+import ServiceView from "./component/ServiceView";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <AdminView/>
             <Navigation></Navigation>
             <Leaving></Leaving>
-            <ServiceViewTable></ServiceViewTable>
+            <ServiceView></ServiceView>
         </div>
     </div>
   );
