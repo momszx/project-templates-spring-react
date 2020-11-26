@@ -32,12 +32,12 @@ public class SummaryController {
     @ResponseBody
     @ApiOperation(value = "Fetch summary")
     public Collection<SummaryDto> fetchAll() {
-        return summaryService.fetchAll().stream().map(summary ->
+        return summaryService.readAll().stream().map(summary ->
                 SummaryDto.builder()
-                        .summaryID(summary.getsummaryID())
-                        .identityNumber(summary.getidentityNumber())
-                        .servicesID(summary.getservicesID())
-                        .barCode(summary.getbarCode())
+                        .id(summary.getId())
+                        .identityNumber(summary.getIdentityNumber())
+                        .servicesID(summary.getServicesID())
+                        .barCode(summary.getBarCode())
                         .build()
         ).collect(Collectors.toList());
     }
@@ -46,7 +46,7 @@ public class SummaryController {
     @ApiOperation(value = "Create new summary")
     public void create(@RequestBody SummaryRecordRequestDto request) {
         try{
-            summaryService.create(new Summary(request.getsummaryID(), request.getidentityNumber(), request.getservicesID(), request.getbarCode()));
+            summaryService.create(new Summary(request.getId(), request.getIdentityNumber(), request.getServicesID(), request.getBarCode()));
         }
         catch (SummaryAlreadyExistsException e) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());

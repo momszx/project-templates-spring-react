@@ -30,7 +30,7 @@ public class EmployeeController{
     @GetMapping(value = {"/"}, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     @ApiOperation(value = "Get employee")
-    public EmployeeDto fetchByuserData(@RequestBody Employee user){
+    public EmployeeDto fetchByUserData(@RequestBody Employee user){
         //Itt még nem biztos hogy jól kapja meg a user adatokat 
         for (EmployeeDto employee:employees){
             if(employee.getEmployeeEmail().equals(user.getEmployeeEmail())&&
