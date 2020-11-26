@@ -6,6 +6,7 @@ import Login from "./component/Login";
 import AdminView from "./component/AdminView";
 import Navigation from "./component/Navigation";
 import Leaving from "./component/Leaving";
+import ServiceViewTable from "./component/ServieViewTable";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <AdminView/>
             <Navigation></Navigation>
             <Leaving></Leaving>
+            <ServiceViewTable></ServiceViewTable>
         </div>
     </div>
   );
