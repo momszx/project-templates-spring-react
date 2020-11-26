@@ -8,7 +8,7 @@ const Login = () => (
         initialValues={{email: "", password: ""}}
         onSubmit={(values, {setSubmitting}) => {
             setTimeout(() => {
-                LoginAction.Login(values.email, values.password);
+                LoginAction.Login(values);
                 setSubmitting(false);
             }, 500);
         }}
@@ -71,4 +71,4 @@ const Login = () => (
         }}
     </Formik>
 );
-export default Login;
+export default Login

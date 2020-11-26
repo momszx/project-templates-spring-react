@@ -1,6 +1,6 @@
 import {EventEmitter} from 'events'
 import dispatcher from "../dispatcher/Dispatcher";
-import {refresh} from "../dispatcher/ComplexNumberActionConstants";
+import * as actionConstants from '../dispatcher/LoginActionConstans'
 
 class UserStore extends  EventEmitter {
     _user = null;
@@ -22,7 +22,8 @@ const store = new UserStore();
 export default store;
 
 dispatcher.register(({action,payload})=>{
-    if(action !== refresh ) return;
-    store._complexNumbers = payload;
+    if(action !== actionConstants.loggedIn) return;
+    store._user = payload;
+    console.log(store._user)
     store.emitChange();
 })

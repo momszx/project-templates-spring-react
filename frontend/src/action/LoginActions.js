@@ -3,16 +3,17 @@ import dispatcher from '../dispatcher/Dispatcher';
 import * as actionConstants from '../dispatcher/LoginActionConstans'
 
 export const Login = ({email,password}) =>{
+    console.log(email,password)
     axios.post('/login',
         {
-            email : email,
-            password : password
+            email: email,
+            password: password
         })
         .then((resp) => {
             const {id, employeeName, employeeEmail, pwd,positionID} = resp.data;
-            console.log(resp)
+            console.log(resp.data)
             dispatcher.dispatch({
-                command : actionConstants.loggedIn,
+                action : actionConstants.loggedIn,
                 payload : { id, employeeName, employeeEmail, pwd, positionID}
             });
         })
@@ -20,8 +21,8 @@ export const Login = ({email,password}) =>{
             console.log(error);
             dispatcher.dispatch({
                 action: actionConstants.showError,
-                //payload : `${error.response.status}-${error.response.statusText}: ${error.response.data.message}`
-                payload : null
+                payload : `${error.response.status}-${error.response.statusText}: ${error.response.data.message}`
+                //payload : null
             })
         })
 }

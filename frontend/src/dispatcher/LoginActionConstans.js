@@ -1,6 +1,6 @@
 module.exports = {
     loggedIn : 'USER_LOGGED_IN',
-    refresh : 'REFRESH_LOGIN_USERS',
+    loggedOut : 'USER_LOGGED_OUT',
     showError : 'SHOW_LOGIN_ERROR_MSG',
     clearError : 'CLEAR_LOGIN_ERROR_MSG'
 }

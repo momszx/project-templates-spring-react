@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.scss';
-import ComplexNumberRecordingForm from "./component/ComplexNumberRecordingForm";
-import ComplexNumberList from "./component/ComplexNumberList";
 import Login from "./component/Login";
 import AdminView from "./component/AdminView";
 import Navigation from "./component/Navigation";
