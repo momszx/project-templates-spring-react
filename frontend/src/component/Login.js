@@ -1,14 +1,14 @@
 import React from "react";
 import {Formik} from "formik";
 import * as Yup from "yup";
+import * as LoginAction from "../action/LoginActions";
 
 const Login = () => (
     <Formik
         initialValues={{email: "", password: ""}}
         onSubmit={(values, {setSubmitting}) => {
             setTimeout(() => {
-                //LoginActions.login(values);
-                console.log("Ámen");
+                LoginAction.Login(values.email, values.password);
                 setSubmitting(false);
             }, 500);
         }}

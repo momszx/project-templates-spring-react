@@ -6,6 +6,7 @@ let database = {};
 let router = jsonServer.router(database);
 let temp = jsonServer.defaults();
 
+/*
 server.post('/login',(req,res) => {console.log(req.body);
     res.status(200).send(
         {
@@ -14,14 +15,15 @@ server.post('/login',(req,res) => {console.log(req.body);
         }
     );
 });
+*/
 
-server.get('/login',(req,res) => {
+server.post('/login',(req,res) => {
     const users = [
         {
             id: 1,
             employeeName: 'Gipsz Jakab',
             employeeEmail: 'gipsz@jakab.com',
-            pwd: 'gipszjakab',
+            pwd: 'asd',
             positionID: 1
         },
         {
