@@ -21,13 +21,13 @@ import Switch from '@material-ui/core/Switch';
 import DeleteIcon from '@material-ui/icons/Delete';
 import FilterListIcon from '@material-ui/icons/FilterList';
 
-function createData(service, price) {
-    return { service, price};
+function createData(id, service, price) {
+    return { id, service, price};
 }
 
 const rows = [
-    createData('masszázs', 305),
-    createData('csúszda', 452)
+    createData(15, 'masszázs', 305),
+    createData(8,'csúszda', 452)
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -57,6 +57,7 @@ function stableSort(array, comparator) {
 }
 
 const headCells = [
+    { id: 'id', numeric: false, disablePadding: false, label: "ID"},
     { id: 'service', numeric: false, disablePadding: true, label: "Services" },
     { id: 'price', numeric: true, disablePadding: false, label: 'Price' }
 ];
@@ -284,17 +285,17 @@ export default function ServiceViewTable() {
                             {stableSort(rows, getComparator(order, orderBy))
                                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                 .map((row, index) => {
-                                    const isItemSelected = isSelected(row.name);
+                                    const isItemSelected = isSelected(row.id);
                                     const labelId = `enhanced-table-checkbox-${index}`;
 
                                     return (
                                         <TableRow
                                             hover
-                                            onClick={(event) => handleClick(event, row.name)}
+                                            onClick={(event) => handleClick(event, row.id)}
                                             role="checkbox"
                                             aria-checked={isItemSelected}
                                             tabIndex={-1}
-                                            key={row.name}
+                                            key={row.id}
                                             selected={isItemSelected}
                                         >
                                             <TableCell padding="checkbox">
@@ -303,6 +304,7 @@ export default function ServiceViewTable() {
                                                     inputProps={{ 'aria-labelledby': labelId }}
                                                 />
                                             </TableCell>
+                                            <TableCell align="left">{row.id}</TableCell>
                                             <TableCell component="th" id={labelId} scope="row" padding="none">
                                                 {row.service}
                                             </TableCell>
