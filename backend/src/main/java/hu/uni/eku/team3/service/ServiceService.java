@@ -11,7 +11,7 @@ public interface ServiceService {
 
     Collection<Service> readAll();
 
-    void update(String original, Service updated) throws ServiceNotFoundException;
+    void update(Integer original, Service updated) throws ServiceNotFoundException;
 
-    void delete(String serviceId) throws ServiceNotFoundException;
+    void delete(Integer serviceId) throws ServiceNotFoundException;
 }

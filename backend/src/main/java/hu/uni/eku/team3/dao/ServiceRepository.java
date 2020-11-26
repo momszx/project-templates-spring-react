@@ -5,8 +5,8 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
-public interface ServiceRepository extends CrudRepository<Service, String> {
-    Service findUsageById(String id);
+public interface ServiceRepository extends CrudRepository<Service, Integer> {
+    Service findUsageById(Integer id);
 
-    Optional<Service> findById(String id);
+    Optional<Service> findById(Integer id);
 }

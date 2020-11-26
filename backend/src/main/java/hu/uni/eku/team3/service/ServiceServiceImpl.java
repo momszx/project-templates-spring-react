@@ -39,12 +39,12 @@ public class ServiceServiceImpl implements ServiceService {
     }
 
     @Override
-    public void update(String original, Service updated) throws ServiceNotFoundException {
+    public void update(Integer original, Service updated) throws ServiceNotFoundException {
         dao.update(original, updated);
     }
 
     @Override
-    public void delete(String serviceId) throws ServiceNotFoundException {
+    public void delete(Integer serviceId) throws ServiceNotFoundException {
         dao.delete(serviceId);
     }
 }

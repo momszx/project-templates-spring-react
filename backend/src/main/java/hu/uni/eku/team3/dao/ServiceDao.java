@@ -11,9 +11,9 @@ public interface ServiceDao {
 
     Collection<Service> readAll();
 
-    void update(String original, Service updated) throws ServiceNotFoundException;
+    void update(Integer original, Service updated) throws ServiceNotFoundException;
 
-    void delete(String service) throws ServiceNotFoundException;
+    void delete(Integer service) throws ServiceNotFoundException;
 
-    Optional<hu.uni.eku.team3.dao.entity.Service> findById(String id);
+    Optional<hu.uni.eku.team3.dao.entity.Service> findById(Integer id);
 }

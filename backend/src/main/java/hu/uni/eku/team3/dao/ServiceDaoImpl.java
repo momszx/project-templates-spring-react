@@ -16,7 +16,7 @@ public class ServiceDaoImpl implements ServiceDao {
 
     @Override
     public void create(Service ServiceCreate) {
-
+            repository.save(ServiceEntityModelConverter.model2entity(ServiceCreate));
     }
 
     @Override
@@ -27,7 +27,7 @@ public class ServiceDaoImpl implements ServiceDao {
     }
 
     @Override
-    public void update(String original, Service updated) throws ServiceNotFoundException {
+    public void update(Integer original, Service updated) throws ServiceNotFoundException {
         if (findById(original).isPresent()) {
             repository.findById(original).map(s -> {
                 s.setName(updated.getName());
@@ -39,14 +39,14 @@ public class ServiceDaoImpl implements ServiceDao {
     }
 
     @Override
-    public void delete(String service) throws ServiceNotFoundException {
+    public void delete(Integer service) throws ServiceNotFoundException {
         if (repository.findById(service).isPresent())
             repository.delete(repository.findById(service).get());
         else
             throw new ServiceNotFoundException(String.format("Service (%s) does not exists!", service));
     }
 
-    public Optional<hu.uni.eku.team3.dao.entity.Service> findById(String id) {
+    public Optional<hu.uni.eku.team3.dao.entity.Service> findById(Integer id) {
         return repository.findById(id);
     }
 

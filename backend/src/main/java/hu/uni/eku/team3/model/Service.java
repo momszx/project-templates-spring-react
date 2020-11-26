@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Service {
-    private int id;
+    private Integer id;
     private String name;
     private int price;
 }

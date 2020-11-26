@@ -10,36 +10,38 @@ import java.util.stream.StreamSupport;
 
 @RequiredArgsConstructor
 @Service
-public class GuestDaoImpl implements GuestDao{
+public class GuestDaoImpl implements GuestDao {
     private final GuestRepository repository;
+
     @Override
     public void create(Guest guestCreate) {
-        repository.save(GuestEntityModleConverter.model2entity(guestCreate));
+        repository.save(GuestEntityModelConverter.model2entity(guestCreate));
     }
 
     @Override
     public Collection<Guest> readAll() {
-        return StreamSupport.stream(repository.findAll().spliterator(),false)
-                .map(entity -> GuestEntityModleConverter.entity2model(entity))
+        return StreamSupport.stream(repository.findAll().spliterator(), false)
+                .map(GuestEntityModelConverter::entity2model)
                 .collect(Collectors.toList());
     }
 
     @Override
     public void update(Integer original, Guest updated) {
-            hu.uni.eku.team3.dao.entity.Guest toUpdate =repository.findUsageById(original);
-            toUpdate.setDepartureDate(updated.getDepartureDate());
-            repository.save(toUpdate);
+        // hu.uni.eku.team3.dao.entity.Guest toUpdate =repository.findUsageById(original);
+        // toUpdate.setDepartureDate(updated.getDepartureDate());
+        // repository.save(toUpdate);
     }
 
     @Override
     public void delete(Integer guestDelete) {
-        hu.uni.eku.team3.dao.entity.Guest result= repository.findUsageById(guestDelete);
-        if(result!=null){
-            repository.delete(result);
-        }
+       // hu.uni.eku.team3.dao.entity.Guest result = repository.findUsageById(guestDelete);
+       // if (result != null) {
+       //     repository.delete(result);
+       // }
     }
-    private static class GuestEntityModleConverter{
-        private static Guest entity2model(hu.uni.eku.team3.dao.entity.Guest entity){
+
+    private static class GuestEntityModelConverter {
+        private static Guest entity2model(hu.uni.eku.team3.dao.entity.Guest entity) {
             return new Guest(
                     entity.getIdentityNumber(),
                     entity.getName(),
@@ -48,7 +50,8 @@ public class GuestDaoImpl implements GuestDao{
                     entity.getDepartureDate()
             );
         }
-        private static hu.uni.eku.team3.dao.entity.Guest model2entity(Guest model){
+
+        private static hu.uni.eku.team3.dao.entity.Guest model2entity(Guest model) {
             return hu.uni.eku.team3.dao.entity.Guest.builder()
                     .identityNumber(model.getIdentityNumber())
                     .name(model.getName())

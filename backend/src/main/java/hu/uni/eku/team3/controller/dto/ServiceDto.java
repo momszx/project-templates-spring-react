@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @Builder
 public class ServiceDto {
-    private String id;
+    private Integer id;
     private String name;
     private int price;
 }
