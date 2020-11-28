@@ -31,3 +31,6 @@ public class PositionController {
     public Collection<PositionDto> readAll() {
         return positionService.readAll().stream().map(product ->
                 PositionDto.builder()
+                        .id(position.getid())
+                        .name(position.getname())
+                        .build()
