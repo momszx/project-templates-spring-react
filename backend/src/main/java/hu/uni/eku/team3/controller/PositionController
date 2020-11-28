@@ -27,3 +27,7 @@ public class PositionController {
 
     @GetMapping(value = {"/"}, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
+    @ApiOperation(value = "Read all position")
+    public Collection<PositionDto> readAll() {
+        return positionService.readAll().stream().map(product ->
+                PositionDto.builder()
