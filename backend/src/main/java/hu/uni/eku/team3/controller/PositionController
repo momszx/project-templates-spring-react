@@ -34,3 +34,7 @@ public class PositionController {
                         .id(position.getid())
                         .name(position.getname())
                         .build()
+        ).collect(Collectors.toList());
+    }
+
+}
