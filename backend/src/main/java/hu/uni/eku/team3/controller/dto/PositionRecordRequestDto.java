@@ -7,6 +7,6 @@ import lombok.Data;
 @Data
 @Builder
 public class PositionRecordRequestDto {
-    private String id;
+    private int id;
     private String name;
 }
