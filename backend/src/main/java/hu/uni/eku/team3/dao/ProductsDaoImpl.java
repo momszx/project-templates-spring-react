@@ -20,7 +20,7 @@ public class ProductsDaoImpl implements ProductsDao{
     @Override
     public Collection<Products> readAll() {
         return StreamSupport.stream(repository.findAll().spliterator(),false)
-                .map(entity -> ProductsDaoImpl.ProductsEntityModleConverter.entity2model(entity))
+                .map(entity-> ProductsEntityModleConverter.entity2model(entity))
                 .collect(Collectors.toList());
     }
 
