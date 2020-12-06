@@ -1,6 +1,7 @@
 import React from "react";
 import ReceptionOnlyButton from "./ReceptionOnlyButton";
 import store from "../store/UserStore";
+import {logout} from "../action/LogoutActions";
 
 class Navigation extends React.Component{
     constructor(props) {
@@ -45,7 +46,7 @@ class Navigation extends React.Component{
                     <ReceptionOnlyButton></ReceptionOnlyButton>
                 )}
 
-                <button className={"btn btn-warning"}>Log out</button>
+                <button onClick={logout()} className={"btn btn-warning"}>Log out</button>
             </div>
         )
     }
