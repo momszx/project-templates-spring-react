@@ -2,6 +2,7 @@ import React from "react";
 import ServiceTable from "./TableServices";
 import ConsumeTable from "./TableConsumes";
 import IdValidation from "./IdValidation";
+import {Checkoutguest, Checkoutsummary} from "../action/Checkout";
 
 
 
@@ -29,6 +30,10 @@ class Leaving extends React.Component {
     idChanged = (event) => {
         console.log('Do something .....')
     }
+    Checkout =(id1,id2) => {
+        Checkoutsummary(id2);
+        Checkoutguest(id1);
+    }
     render() {
         return (
             <div>
@@ -41,7 +46,7 @@ class Leaving extends React.Component {
                 <h1>Leaving date <span className={"alert alert-info"}>{
                     this.state.departureDate
                 }</span></h1>
-                <button className={"btn btn-warning"}>Checkout</button>
+                <button onClick={this.Checkout(this.state.id,this.state.usedServices[0].id)} className={"btn btn-warning"}>Checkout</button>
                 <div><ServiceTable></ServiceTable></div>
                 <div><ConsumeTable></ConsumeTable></div>
             </div>
