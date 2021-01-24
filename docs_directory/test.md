@@ -220,11 +220,73 @@ Az alábbi elvárások szerepelnek az üzleti illetve fejlesztői specifikáció
 |  Szervezeti egység/ beosztás: | Projekt manager, Test maneger  |
 |  Dátum: |  2020.01.06 13:58  |
 
-### 5.5 Jóváhagyások
+### 5.4 Jóváhagyások
 
 |   |   |
 |---|---|
 |  Név: |  Donkó Róbert Márk |
 |  Szervezeti egység/ beosztás: | Projekt Manager  |
 |  Dátum: |  2020.01.07 11:00  |
+
+## 6 Tesztelési jelentés 
+
+### 6.1 Tesztelési jelentés -  1. Bejelentkezés, regisztráció funkció tesztelése 
+|   |   |
+|---|---|
+| A hivatkozott tesztjegyzőkönyvek rövid leírása és eredménye:  | "A bejentkezés és regisztráció opció lépésről lépésre tesztelésre került hibás és megfelelő adatokkal, a connection miatt nem működik megfelelően" |
+| A tesztelt folyamatok/funkciók/modulok leírása: | Insert, Select |
+| A tesztadatok típusa:  | String, int  |
+| A tesztelt rendszer beállításai:  | A program specifikációjában szereplő alap beálítások  |
+| A tesztelés eredménye:  | **élesíthető**  |
+| Megjegyzések:  | BUG |
+
+**Tesztelést elvégezte**
+
+|   |   |
+|---|---|
+|  Név: |  Donkó Róbert Márk |
+|  Szervezeti egység/ beosztás: | Projekt Manager  |
+|  Dátum: |  2020.01.06 12:15  |
+|   |   |
+|  Név: |  Heim József  |
+|  Szervezeti egység/ beosztás: |  Vezető adatbázis fejlesztő |
+|  Dátum: |  2020.01.06 14:36  |
+
+### 6.2 Tesztelési jelentés - 2. adatbázissal való kommunikáció tesztelése
+|   |   |
+|---|---|
+| A hivatkozott tesztjegyzőkönyvek rövid leírása és eredménye:  | "Az alkalmazás Lájk, Dislike funkció tesztelése" |
+| A tesztelt folyamatok/funkciók/modulok leírása: | Az alkalmazás adatbázisból lekérés, és egyé műveleteinek tesztelése  |
+| A tesztadatok típusa:  | szöveg  |
+| A tesztelt rendszer beállításai:  |A program specifikációjában szereplő alap beálítások  |
+| A tesztelés eredménye:  | **Megfelelt/élesíthető**  |
+| Megjegyzések:  | -  |
+
+**Tesztelést elvégezte**
+
+|   |   |
+|---|---|
+|  Név: |  Donkó Róbert Márk |
+|  Szervezeti egység/ beosztás: | Test manager  |
+|  Dátum: |  2020.01.06 12:15  |
+
+
+### 6.3 Tesztelési jelentés - 3. backend és frontend felület kommunikációjának tesztelése
+|   |   |
+|---|---|
+| A hivatkozott tesztjegyzőkönyvek rövid leírása és eredménye:  | "Az alkalmazás részei megfelelően kommunikálnak egymással " |
+| A tesztelt folyamatok/funkciók/modulok leírása: |  Az alkalmazás részei megfelelően kommunikálnak egymással |
+| A tesztadatok típusa:  | szöveg  |
+| A tesztelt rendszer beállításai:  | A program specifikációjában szereplő alap beálítások  |
+| A tesztelés eredménye:  | **Nem felelt meg**  |
+| Megjegyzések:  | -  |
+
+**Tesztelést elvégezte**
+
+|   |   |
+|---|---|
+|  Név: |  Donkó Róbert Márk |
+|  Szervezeti egység/ beosztás: | Test manager  |
+|  Dátum: |  2020.01.07 11:35  |
+
 
