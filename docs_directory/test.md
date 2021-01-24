@@ -289,4 +289,28 @@ Az alábbi elvárások szerepelnek az üzleti illetve fejlesztői specifikáció
 |  Szervezeti egység/ beosztás: | Test manager  |
 |  Dátum: |  2020.01.07 11:35  |
 
+### 7 Jóváhagyások
+
+|   |   |
+|---|---|
+|  Név: |  Donkó Róbert Márk |
+|  Szervezeti egység/ beosztás: | Projekt Manager  |
+|  Dátum: |  2020.01.07 13:00  |
+
+## #1: GUI teszt:
+A gui hibátlanul elindul, megnyitja a bejelentkező felületet. A textboxok működnek, a jelszó textbox titkosítva. A bejelenkezés gomb visszajelez panelváltást, de nem *vált* panelt.
+
+## #2:Adatbázis teszt:
+Az adatbázist phpmyadmin-ba be importálva hibátlanul lefutnak, legenerálják a táblákat, rekordokat lehet felvinni és ezeken szűréseket hatékonyan végezni.
+
+## #3:Adatbázis Connection teszt:
+
+Az adatbázis már hibátlanul fut, viszont a JAVA nyelven íródott program, felismeri látja, mégsem tudja kezelni és hibát dob rá, ezért nem lehet insertálni-Selectelni vagy egyébb CRUD műveletet végezni rajta program futtatásával, csak és kizárólag belül a programkódban megírt SQL utasítások segítségével. 
+
+**Tesztelést elvégezte**
+|   |   |
+|---|---|
+|  Név: |  Donkó Róbert Márk |
+|  Szervezeti egység/ beosztás: | Projekt Manager  |
+|  Dátum: |  2020.01.15 21:15  |
 
