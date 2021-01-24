@@ -150,3 +150,81 @@ Az alábbi elvárások szerepelnek az üzleti illetve fejlesztői specifikáció
 - Technikai, a teszt forgatókönyvben leírtak szerint.
 - A projekt menedzser jóváhagyása a teszt leszállítandókra
 
+## 5 Tesztjegyzőkönyv
+### 5.1 Tesztelési jegyzőkönyv - 1. Bejletkezés, regisztráció funkcó tesztelése
+
+|   |   |
+|---|---|
+| A teszt-eset leírás és célja:  | A bejelentkezés menüpont tesztelése |
+| A tesztelt folyamat/funkció leírása:  |  A felület viselkedése hibás felhasználónév / jelszó megadása esetén, megfelelő adatok esetén illetve többszöri hibás bevitelekor, továbbá új felhasználó fiók sikeres-e regisztrálása  |
+| A tesztelés előfeltételei:  |  A programnak rendelkeznie kell minimum egy dummy adatbázissal |
+| A tesztelés dátuma és időpontja:  |  2020.01.06 10:25 |
+| A tesztadatok típusa:  | N/A  |
+| A tesztet végző személy(ek):  | Donkó Róbert Márk  |
+| A tesztelt rendszer beállításai:  | A program specifikációjában szereplő alap beálítások  |
+| A teszt-eset elvárt eredménye:  |  A specifikációban taglalt viselkedés |
+| A tesztelés eredménye:  | **Megfelelt/élesíthető**  |
+| Megjegyzések:  | -  |
+
+**Tesztelést elvégezte**
+
+|   |   |
+|---|---|
+|  Név: |  Donkó Róbert Márk |
+|  Szervezeti egység/ beosztás: | Projekt manager, Test maneger  |
+|  Dátum: |  2020.01.06 11:15  |
+
+### 5.2 Tesztelési jegyzőkönyv - 2. adatbázissal való kommunikáció tesztelése
+
+|   |   |
+|---|---|
+| A teszt-eset leírás és célja:  | adatbázissal való kommunikáció tesztelése |
+| A tesztelt folyamat/funkció leírása:  |  Az alkalmazás adatbázisból lekérés, és egyé műveleteinek tesztelése |
+| A tesztelés előfeltételei:  |  A programnak rendelkeznie kell minimum egy dummy adatbázissal |
+| A tesztelés dátuma és időpontja:  |  2020.01.06 11:38 |
+| A tesztadatok típusa:  | szöveg  |
+| A tesztet végző személy(ek):  | Donkó Róbert Márk  |
+| A tesztelt rendszer beállításai:  | A program specifikációjában szereplő alap beálítások  |
+| A teszt-eset elvárt eredménye:  |  A szovegszerkesztó optimális működése |
+| A tesztelés eredménye:  | **Megfelelt/élesíthető**  |
+| Megjegyzések:  | -  |
+
+**Tesztelést elvégezte**
+
+|   |   |
+|---|---|
+|  Név: |  Donkó Róbert Márk |
+|  Szervezeti egység/ beosztás: | Projekt manager, Test maneger  |
+|  Dátum: |  2020.01.06 12:15  |
+
+### 5.3 Tesztelési jegyzőkönyv - 3. backend és frontend felület kommunikációjának tesztelése
+
+|   |   |
+|---|---|
+| A teszt-eset leírás és célja:  | A backend és frontend sikeres kommunikációja
+| A tesztelt folyamat/funkció leírása:  | Az alkalmazás részei megfelelően kommunikálnak egymással|
+| A tesztelés előfeltételei:  |  A programnak rendelkeznie kell minimum egy dummy adatbázissal  |
+| A tesztelés dátuma és időpontja:  |  2020.01.06 13:31 |
+| A tesztadatok típusa:  | szöveg |
+| A tesztet végző személy(ek):  | Donkó Róbert Márk  |
+| A tesztelt rendszer beállításai:  | A program specifikációjában szereplő alap beálítások  |
+| A teszt-eset elvárt eredménye:  |  A specifikációban taglalt viselkedés |
+| A tesztelés eredménye:  | **Nem felelt meg**  |
+| Megjegyzések:  | -  |
+
+**Tesztelést elvégezte**
+
+|   |   |
+|---|---|
+|  Név: |  Donkó Róbert Márk |
+|  Szervezeti egység/ beosztás: | Projekt manager, Test maneger  |
+|  Dátum: |  2020.01.06 13:58  |
+
+### 5.5 Jóváhagyások
+
+|   |   |
+|---|---|
+|  Név: |  Donkó Róbert Márk |
+|  Szervezeti egység/ beosztás: | Projekt Manager  |
+|  Dátum: |  2020.01.07 11:00  |
+
