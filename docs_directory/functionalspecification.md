@@ -88,11 +88,17 @@ Vendég: a speciális óra segítségével szolgáltatásokat vehet igénybe. Me
 
 12. Fogalomszótár:
 
--bug: fejlesztési hiba ami által a program nem a várt eredményt hozza
--backend: A kiszolgáló, ahonnan az alkalmazást el lehet érni 
--frontend:  egy réteg ami feladata a rendszerbõl kijutó adatok prezentálása, illetve a bejövõ adatok fogadása
--web-service: különböző programnyelveken írt és különbözõ platformokon futó szoftveralkalmazások interneten keresztül történõ adatcseréjére használt webszolgáltatások.
--dolgozói felület: A dolgozónak lehetősége van vendég felvételére, illetve vendég törlésére a rendszerből. Megjelenítheti egy vendég által igénybe vett szolgáltatásokat részletesen, illetve ezek összesített árát. 
+- bug: fejlesztési hiba ami által a program nem a várt eredményt hozza
+
+- backend: A kiszolgáló, ahonnan az alkalmazást el lehet érni 
+
+- frontend:  egy réteg ami feladata a rendszerbõl kijutó adatok prezentálása, illetve a bejövõ adatok fogadása
+
+- web-service: különböző programnyelveken írt és különbözõ platformokon futó szoftveralkalmazások interneten keresztül történõ adatcseréjére használt webszolgáltatások.
+
+- dolgozói felület: A dolgozónak lehetősége van vendég felvételére, illetve vendég törlésére a rendszerből. Megjelenítheti egy vendég által igénybe vett szolgáltatásokat részletesen, illetve ezek összesített árát. 
+
 - vendég: a wellness hotel vendége, akinek bejelentkezéskor egy dolgozó felveszi az adatait.
--dolgozó: a wellness hotel alkalmazotja, megfelelő dolgozói id birtokában tud felvenni, illetve törölni vendégeket a rendszerből.
+
+- dolgozó: a wellness hotel alkalmazotja, megfelelő dolgozói id birtokában tud felvenni, illetve törölni vendégeket a rendszerből.
 
