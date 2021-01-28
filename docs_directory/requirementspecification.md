@@ -57,3 +57,13 @@ Az Alkalmazás használatához szükséges technikai feltételek: használathoz 
 9.Garancia és kártérítés
 
 A fent említett technikai feltételek nem teljesüléséért a Tulajdonos nem vonható felelősségre. A Tulajdonos nem vállal garanciát az Alkalmazás megszakításmentes működéséért, valamint vis major hibákért. Az ebből eredő adatvesztésért, tartalom vesztésért a Tulajdonos szintén nem tartozik kártérítési felelősséggel.
+
+10.A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása.
+
+A rendszerre vonatkozó külsö megszorítások közé tartoznak az alábbiak: - pályázat - törvények - rendeletek - szabványok és ajanlások.
+ Tekintsük először a pályázatot. Pályázat elnyerése esetén eleget kell tenni a pályázatban leírt feltételeknek is. Nem elegendő a saját magunk elé kitűzott céldátum, hanem figyelembe kell venni azt is, hogy a pályázat mennyi időre szól és mikor jár le. Mindezek mellett pályázat esetén meghatározottak azok is, hogy a pályázaton elnyert pénzt, a projekt mely részében, a projekt mely elemeire használhatjuk fel. 
+Törvény esetében figyelembe kell venni azt a tényt, hogy a projekt mely országon belül készül és mely országban/országokban szeretnék a későbbiekben ezt forgalmazni és használni. A programnak eleget kell tennie az összes forgalmazni kívánt ország törvényeinek. 
+Ezeken kívül még lehetnek külön erre a célra alkalmazott rendeletek, amelyeket szinten figyelembe kell venni.
+ Mivel Magyarországon készül el a program, így ez esetben törvényileg a magyar törvénykönyv szabályozásainak is meg kell felelnie. Összességét tekintve a gonololatjelek között és kapcsolat van, vagyis mindennek érvényesülnie kell egyszerre. Figyelembe kell venni a pályázati feltételeket, a törvényeket és rendeleteket és ügyeli kell a szabványokra. Ha az összes tényező közül bármelyik is hiányzik vagy hibás, akkor a projekt nem megfelelő és nem tökéletes.
+Például a program semmiképp sem engedélyezheti,hogy kiskorú alkoholt vehessen illetve nem engedélyezheti a szauna használatát kiskorúak számára.
+
